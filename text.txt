@@ -1,2 +1,18 @@
 composer create-project laravel/laravel novin52
 
+php artisan serve
+
+composer require laravel/passport
+
+php artisan migrate
+
+php artisan passport:install
+
+Personal access client created successfully.
+Client ID: 1
+Client secret: YRtW5myvi2NmXtcnfq9J3GvjVZglXvamvQ3ad3vX
+Password grant client created successfully.
+Client ID: 2
+Client secret: KzcEj1cpu1mVhqgh3hOusC877IyP2VGPJjgGg5kM
+
+
