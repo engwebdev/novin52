@@ -15,4 +15,23 @@ Password grant client created successfully.
 Client ID: 2
 Client secret: KzcEj1cpu1mVhqgh3hOusC877IyP2VGPJjgGg5kM
 
+{
+   "user": {
+      "id": 2,
+      "name": "admin",
+      "email": "admin@admin.admin"
+   },
+   "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWEwN2VjZjllMTY0NWMzNDVkNTU4ZGQ3YzYzYzcyM2UxOWZiNzBkOTcyMzZkMzEzYzU4OTQwMmFkNTY0YjZhYjBiMDQ5ODlmMGZkODE5YjkiLCJpYXQiOjE3MDgwMDQ0ODguMzMzNTUsIm5iZiI6MTcwODAwNDQ4OC4zMzM1NTgsImV4cCI6MTczOTYyNjg4OC4zMTYwNDYsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.fxjDnec3QiBxvWUmQwrxSnSt9X6LfoeWpSzo0CYUq3kIENT9ezaRR0wrSIYByGWMp9-7pdkYyJTGnle7BTewJSvX2d-6yhBMGjrfjFmCzLwnGXX-f6mkYxcIYpndjbYxwT2TrMJdtQPkYA509LBH-CWmS9mPxXgPs2_ZhE2IF8Sl3zq91GpOoOHlr7D2ukTLpXMFQ1JT_iqR92vNhcgkfhpFPKMbO1HgeibiI_bMU2By5_PCPkyimZMPd-LGlhxlyoidls1r8-w9ocCxe03GR8iGtdTzUvVgGCsCiMF6TwzeCyer-ck3cKwnOQO2tj0270bD9sGarkCTm3ydCxh9VhxiQ5C8_xaB_RkHVTTpWaCNd8edwN78dtqJDHtjPlXjOee0EpNQyEEZ_IcLM9FSXqgkroQyZe-Nhja3IWRR-qJ2tD0XqVghOmxbQyn4NyI8CR1IQHnJmmrPEG4huReH3eR6fIxgNjoj2foE4Jd59K1v-85k03jUmjQ2Qx_0lAwywVPoxTlTArnN-FozmDpmOB59VOcnnlOe4iPNyPVC5CESeJ2NplYY6rV7FLHe1wU2lofF7m6UG_Ppx05TOB1tDguocylJ93_-DhhUUncoVzN19qfZuAGrp_J_CKtQmBmzlzq11D1VE9gXIIXLEILnaiVbpDQgE9F2FSpsNV_vLYw",
+   "token_type": "Bearer"
+}
+
+php artisan make:migration create_roles_table
+php artisan make:migration create_role_user_table
+
+php artisan make:model Roles
+
+php artisan migrate
+
+php artisan make:controller Api/v1/RoleController --resource
+php artisan make:controller Api/v1/RoleController --api
 
