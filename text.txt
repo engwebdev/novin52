@@ -35,3 +35,79 @@ php artisan migrate
 php artisan make:controller Api/v1/RoleController --resource
 php artisan make:controller Api/v1/RoleController --api
 
+php artisan make:middleware CheckRole
+
+{
+   "user": {
+      "id": 3,
+      "name": "novin",
+      "email": "novin@novin.novin"
+   },
+   "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWVlMWYwN2Y0YmYwZDMyYTA0YzcyYjYzYTkxZDcxZGEwYjE4ZTRjY2M4MzgwOGZhNDMxM2Q3NzI2MDlhYmQzMGI1YzllYzRlMTUxN2FmYzIiLCJpYXQiOjE3MDgwNzY2MzYuNDQyNTE3LCJuYmYiOjE3MDgwNzY2MzYuNDQyNTI3LCJleHAiOjE3Mzk2OTkwMzYuNDI1NTk2LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.pBvHNJgi5sAHHdvOV2MooK1wx0pJ6LTklEy5H3oHuVLJ9X-IJCOytc8hbtUoBJTpbCfeioaPfoIplv_QjJ3_csNk0e0dqIG2zLJuID5S0oeKEjjzp-kMfTkMMG7qfiWclbgSKixZClrmXqJx2fVwlJMU8vhwkwzMMn7f5lqlPkp_ujoVrgWigtdDdAG8LyRGabn4tzTyOE1bHHc6JrKkCmhH-6evnxaXDux5e48G0hYnpTCvoZmpZmyoo2jcwaLNlbgbhSznqWPo_Yi5v0JwCeuMpdNQtU_jS-z8EUFuq2JGMqk51AZx24-AwBhgTh3K8uuYfBBg6p6PF7Z082mQ-_ZKcRXydJQCrMcph6VyTQjG70xoiB4e_9IhpkPd9yOj77j5I5DQWrK3y1os1jXx3QjBlRWbKWBegqUYafjAGaPwO0mbFBQG2K6saanubNAPV1o4vBoCnHkTRIP6c1JhbrDDjlSJ6fnIU1jKnwKwIz7HyYL5QVHe-E_BTkKJBt6ya85WoTApTMjqOaEy_tWePxRFFgamkGIFLKvkhj51gaRhFPDobwhuL5S9uUmc6UJibXU9OqwwhRD8ZAVRerWsfVCH2RGyhZ-v-5-CgPKmDXamOfKIn__4lIw07G8UvCKXBqB-IYfdtIy3VHFanKYKRURCWG0N12hb-Y3SuIJ-g9k",
+   "token_type": "Bearer"
+}
+
+composer require lcobucci/jwt
+
+{
+   "user": {
+      "id": 2,
+      "name": "admin",
+      "email": "admin@admin.admin"
+   },
+   "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzhjMDgwNjZiYzlkOGVmYzIyYjRjMGZjZDc4NDkxYWY3NmU1NTA1ZTk2ODYyOGU0ZjY1YWFmZDgxNjU3MDczMDViMGEwMjYyODA1ZjQ1MTYiLCJpYXQiOjE3MDgwODE2MzEuODIwMjU4LCJuYmYiOjE3MDgwODE2MzEuODIwMjY2LCJleHAiOjE3Mzk3MDQwMzEuNzg0MzY1LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.BqGMfDUTg3h-aMXC5gIUZcXout74Kl_RbuC2zTwVbttOSc8HPmGl2Yqny38IksIafqwFV-Z6k4E-AbNl-t5ELNyoioHHX_CiqiDi3J8IavabBVtidDvzgTMTUj-7VfzMN1uOPp8TisJiFx4tR1yOXtac_Vym6u5f7TTUzay6a8GmdjZPzNj3AZ79CUfIDqkbIGDe2YsmmTPqvkme_eJYL68SNHCQcmnxYoeAi9iNxEnITkSwIzOmTyxqWMyCtQZjF6PtomK1_FOMaWXBVm6jbxB8qa6OI-r-UZLWBFTBLZorjm_UX5IPQ5pGQhxoDGAxR3iUpWPHqHnbgG60y587R640EC1TH6s5wCLY8FtABS3HKSWzTEsV4WsXCLWr7nSA1emFJ0H87IZnQsUo_-37ORAO0IrOsW9Ti6A3fSBq3dPdHH7Tt-6kfFdwYoPI8cokE-VzqCuhZ7AM3zaR5kv5f3nuFDDFyESYWEqqzU9igl9eZf2ri7BeyPM3oyRzqmjv2BL7-gSpiJpT7Sf4Oy-JIYjuIGn0sd-KFlsMeF3rB_tOIrS7p1bbb9Y3uUDRcRToCXiUkDtm-hSS7n8j7HeTSsYbvIGyTJNvvFBcSVwEyS_-SKx2UIHjPZfqd7pFQqg2lM4vJh8Ou1D73J7qOdbRiVyUn19QnbhfsZgfzKgQkbI",
+   "token_type": "Bearer"
+}
+
+php artisan make:controller Api/v1/TaskController --api
+
+php artisan make:migration create_tasks_table
+
+php artisan make:model Tasks
+
+php artisan migrate
+
+high low medium
+
+php artisan make:request Task/TaskStoreRequest
+php artisan make:request Task/TaskUpdateRequest
+php artisan make:request Task/TaskDestroyRequest
+php artisan make:request Task/TaskShowRequest
+https://www.example.com/store?type=sale & sort=price_descending & page=43
+'exists:users,id'
+
+php artisan make:resource v1/TaskResource
+php artisan make:resource v1/TaskCollection
+
+php artisan make:factory TaskFactory
+php artisan make:seeder RoleSeeder
+
+
+php artisan db:seed
+
+{
+   "user": {
+      "id": 1,
+      "name": "Dee Abbott DDS",
+      "email": "marta.ohara@example.net"
+   },
+   "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRjNDVkMWZkY2MzYWNmMjZkMzBmNjM3MzAxMDhmMzQ0ZjM4ZjhiMjI4MjQ2ZmEzOTA0YjE0NjhhZTRmZTVhZjAwYTY0NmVkZjQ2NTg4YjEiLCJpYXQiOjE3MDgxNTAxNzAuMzczNTYxLCJuYmYiOjE3MDgxNTAxNzAuMzczNTY1LCJleHAiOjE3Mzk3NzI1NzAuMzY1NzcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.FCtEXVAetAHLSMjn_e7Ozd-TMtJzqcACrDThZMmlzyxVkgpOO_cmuY8J-701nxxf1t0QEmUtN-cSzg8J9c5ZSYoiTyL1HYtywsjMzJJl6evSHOS7y45adbbkCFnjqqn3JetQDsI7hNWyGgUFmdrF7BSuzPaNvwwdMfiF0uRqlJzeDuy3YqlkWe7EmPDVO8mc2pFq-nH6OOfA5idGeFud2PkRSMssqHKp1t709dgAAte52kI5nCLSrz5hcXkNbxUY1Eo1OPvAvyNY3WUjOXVT1GDmTXS239aJ6-SytNgUrZ7EZ_H--eXwof2yEVT5ICo3XoT3ghJoVvR1QuLE_bbARG-ES7yISjPtwQOOmfUiEczkj89S-6COT3xgIUBf2tJJ4oveWiCXA9xXO8HGMzZX6o5y0wgrFop4flp6m99mG36jg3gKD-aBQwEZwaSdwB0NwYCdc8WGbeXekFhhDBxskpkCvLtbaWseUfDDuOS2t1rvTrs0SKjN6xm_aVpvsTkR6EhWJGEujMByPHdwm7-zZLoEliD3ZX6VnGpwP1F_I2LO5P7Nis9MmIaDrK5al_XlHDy4_EKiUpscnFoIwngcvrDyIE2vzqmwxFgzsdRlnkmsNNcQAnFEC_kCJTVB9lThH9mQgY8T-EL16POdx6qn4k990jtG1fljELjaKaW0LuA",
+   "token_type": "Bearer"
+}
+"marta.ohara@example.net",
+
+pearline.emard@example.org
+{
+   "user": {
+      "id": 3,
+      "name": "Etha Skiles",
+      "email": "pearline.emard@example.org"
+   },
+   "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjljMmEwNDQ0MmFiZGM2YjA3MWNlMmZlYzcyNGNiYzJhMWU1NDYwOThhMWMxNDBkZjg5MzZmNzAxNDFkYTk1MmFmODQ1MzhkYzViOTVlMzkiLCJpYXQiOjE3MDgxNTEzODUuMjU5OTg0LCJuYmYiOjE3MDgxNTEzODUuMjU5OTk3LCJleHAiOjE3Mzk3NzM3ODQuOTc1NDM5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.JX6CbNRaMyVeLFT_SJWCxJj11-AWS8WvrmzyHAWoqAE-JkNI4RBtb9GUqBpAoWJ-cuIivkYglyTBuArgSd02sZ3CV33Yc3008Y_3q4boJU6UXdsN87ArI0X5f-_xMwJcN48wZitRI6xCQAvYph576sVQ5y3SST5t_eDDCqW_AwehTu9oHKpz5rWCM054yuLTyakhaidq5s7HJ6cJIuuX9B-kemxE1pLcQFPiB7_AAwHED4jAMLY0cHwh7wihuUynDDG--HOtXFfQRmbv3TZyRHo_OxlESrcnxdPbA6Y9KRb71LmPvPvFRu6wXur4Fl-9GELAvkLSek34B4kDoAmRQUWCYn6RCJgZegONRm6GE3aSarQ-3AlxjbRPF7u4BBFeC3NYB8OCzr6NTn_2_iGbfXnVu34_N_pjuiF5V3Js4uwDXcxuYrSJSKRFVuhnNT95wuZw3JcwHrCXyyd3BiUC8IGKKb_1ZfGJUhoqIE0NhCrOXWe7Adw5GVtJn33DMcyC51Or0c1S4MUGnYCeecNbmnt9NWOqLEkxu4xHLZ75rnZCY2XhLKkmDT9uF3Wd5LkezX-cW6mLWhpvdicfMpWPlCxl7UAwhKjRIB989JsJ8kqxcevpbZN1pjxWbu44d9BWcQFmUqXWPHvxcskBXD-sx9yEmaqWg8qqVJoT0Yt7u1o",
+   "token_type": "Bearer"
+}
+
+
+php artisan make:test Http/Controllers/AuthControllerTest
+./vendor/bin/phpunit tests/Feature/Http/Controllers/AuthControllerTest.php
+php artisan test

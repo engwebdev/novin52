@@ -9,7 +9,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Role extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = [
+        'id',
+        'role_name'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
 
     // config('auth.providers.users.model')
     public function users(): BelongsToMany
