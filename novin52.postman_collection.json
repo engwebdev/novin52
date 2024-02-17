@@ -1,0 +1,944 @@
+{
+	"info": {
+		"_postman_id": "eaa6c5a2-7b35-4e15-a80d-8bdb5bb06bae",
+		"name": "novin52",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10126116",
+		"_collection_link": "https://gold-escape-378289.postman.co/workspace/home~6c90d6ad-89dc-4eec-a209-e9be9dac640c/collection/10126116-eaa6c5a2-7b35-4e15-a80d-8bdb5bb06bae?action=share&source=collection_link&creator=10126116"
+	},
+	"item": [
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "index roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}roles",
+							"host": [
+								"{{hostWithVersion}}roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store roles",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"role_name\": \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}roles",
+							"host": [
+								"{{hostWithVersion}}roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}roles/1",
+							"host": [
+								"{{hostWithVersion}}roles"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update roles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"role_name\": \"user\"\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}roles/2",
+							"host": [
+								"{{hostWithVersion}}roles"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy roles",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}roles/2",
+							"host": [
+								"{{hostWithVersion}}roles"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all user of roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}roles/1/users",
+							"host": [
+								"{{hostWithVersion}}roles"
+							],
+							"path": [
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "attach role to users",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users\": [1,2]\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}roles/1/users",
+							"host": [
+								"{{hostWithVersion}}roles"
+							],
+							"path": [
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detach role from users",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users\": [1]\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}roles/1/users",
+							"host": [
+								"{{hostWithVersion}}roles"
+							],
+							"path": [
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"user_id_novin\", jsonData.user.id);\r",
+									"pm.environment.set(\"user_name_novin\", jsonData.user.name);\r",
+									"pm.environment.set(\"user_email_novin\", jsonData.user.email);\r",
+									"\r",
+									"pm.environment.set(\"access_token_novin\", jsonData.token);\r",
+									"pm.environment.set(\"token_type_novin\", jsonData.token_type);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"novin\",\r\n  \"email\": \"novin@novin.novin\",\r\n  \"password\": \"123456789\",\r\n  \"password_confirmation\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}register",
+							"host": [
+								"{{hostWithVersion}}register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"admin\",\r\n  \"email\": \"admin@admin.admin\",\r\n  \"password\": \"123456789\",\r\n  \"password_confirmation\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 13:41:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 13:41:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"admin\",\n        \"email\": \"admin@admin.admin\"\n    },\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWEwN2VjZjllMTY0NWMzNDVkNTU4ZGQ3YzYzYzcyM2UxOWZiNzBkOTcyMzZkMzEzYzU4OTQwMmFkNTY0YjZhYjBiMDQ5ODlmMGZkODE5YjkiLCJpYXQiOjE3MDgwMDQ0ODguMzMzNTUsIm5iZiI6MTcwODAwNDQ4OC4zMzM1NTgsImV4cCI6MTczOTYyNjg4OC4zMTYwNDYsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.fxjDnec3QiBxvWUmQwrxSnSt9X6LfoeWpSzo0CYUq3kIENT9ezaRR0wrSIYByGWMp9-7pdkYyJTGnle7BTewJSvX2d-6yhBMGjrfjFmCzLwnGXX-f6mkYxcIYpndjbYxwT2TrMJdtQPkYA509LBH-CWmS9mPxXgPs2_ZhE2IF8Sl3zq91GpOoOHlr7D2ukTLpXMFQ1JT_iqR92vNhcgkfhpFPKMbO1HgeibiI_bMU2By5_PCPkyimZMPd-LGlhxlyoidls1r8-w9ocCxe03GR8iGtdTzUvVgGCsCiMF6TwzeCyer-ck3cKwnOQO2tj0270bD9sGarkCTm3ydCxh9VhxiQ5C8_xaB_RkHVTTpWaCNd8edwN78dtqJDHtjPlXjOee0EpNQyEEZ_IcLM9FSXqgkroQyZe-Nhja3IWRR-qJ2tD0XqVghOmxbQyn4NyI8CR1IQHnJmmrPEG4huReH3eR6fIxgNjoj2foE4Jd59K1v-85k03jUmjQ2Qx_0lAwywVPoxTlTArnN-FozmDpmOB59VOcnnlOe4iPNyPVC5CESeJ2NplYY6rV7FLHe1wU2lofF7m6UG_Ppx05TOB1tDguocylJ93_-DhhUUncoVzN19qfZuAGrp_J_CKtQmBmzlzq11D1VE9gXIIXLEILnaiVbpDQgE9F2FSpsNV_vLYw\",\n    \"token_type\": \"Bearer\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"user_id_novin\", jsonData.user.id);\r",
+									"pm.environment.set(\"user_name_novin\", jsonData.user.name);\r",
+									"pm.environment.set(\"user_email_novin\", jsonData.user.email);\r",
+									"\r",
+									"pm.environment.set(\"access_token_novin\", jsonData.token);\r",
+									"pm.environment.set(\"token_type_novin\", jsonData.token_type);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\": \"pearline.emard@example.org\",\r\n   \"password\": \"123456789\"\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}login",
+							"host": [
+								"{{hostWithVersion}}login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "index users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}users",
+							"host": [
+								"{{hostWithVersion}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}users/1",
+							"host": [
+								"{{hostWithVersion}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy users",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}users/1",
+							"host": [
+								"{{hostWithVersion}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all roles of user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}users/1/roles",
+							"host": [
+								"{{hostWithVersion}}users"
+							],
+							"path": [
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "attach roles to user",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roles\": [1,2]\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}users/2/roles",
+							"host": [
+								"{{hostWithVersion}}users"
+							],
+							"path": [
+								"2",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detach roles from user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roles\": [2]\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}users/1/roles",
+							"host": [
+								"{{hostWithVersion}}users"
+							],
+							"path": [
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "index tasks",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}tasks?sort_by=sort_item&order_by=desc&limit=20&page=1&filter=future2",
+							"host": [
+								"{{hostWithVersion}}tasks"
+							],
+							"query": [
+								{
+									"key": "sort_by",
+									"value": "sort_item"
+								},
+								{
+									"key": "order_by",
+									"value": "desc"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "filter",
+									"value": "future2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store tasks",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"task_name\": \"test task\",\r\n  \"task_description\": \"admin test task admin test task admin test task\",\r\n  \"task_priority\": \"low\",\r\n  \"task_due\": \"2024-02-16 00:00:25\"\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}tasks",
+							"host": [
+								"{{hostWithVersion}}tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}tasks/8",
+							"host": [
+								"{{hostWithVersion}}tasks"
+							],
+							"path": [
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update tasks",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"1\",\r\n  \"task_name\": \"qazwsx\",\r\n  \"task_description\": \"qazwsx qazwsx qazwsx qazwsx qazwsx qazwsx admin test task\"\r\n}"
+						},
+						"url": {
+							"raw": "{{hostWithVersion}}tasks/7",
+							"host": [
+								"{{hostWithVersion}}tasks"
+							],
+							"path": [
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy tasks",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type_novin}} {{access_token_novin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostWithVersion}}tasks/20",
+							"host": [
+								"{{hostWithVersion}}tasks"
+							],
+							"path": [
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token_type_novin}} {{access_token_novin}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{hostWithVersion}}test2",
+					"host": [
+						"{{hostWithVersion}}test2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
